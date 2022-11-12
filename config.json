@@ -1,0 +1,15 @@
+{
+  "emoji": {
+    "play": "▶️",
+    "stop": "⏹️",
+    "queue": "📄",
+    "info": "📭",
+    "error": "❌",
+    "success": "☑️",
+    "successgreen": "✅",
+    "leave": "📤",
+    "musicnote": "🎵",
+    "new": "🆕",
+    "repeat": "🔁"
+  }
+}
