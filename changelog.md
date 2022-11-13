@@ -1,5 +1,5 @@
 
-## [0.1.0-canary.0] - 2022-11-7
+## [0.1.0-canary.0] - 2022-11-12
 #### We were able to create this project because of the [Distube Example Bot](https://github.com/distubejs/example) repository, which they were happy to build under the MIT license, but we changed and removed some of the functions and features previously created by them.
 
 ### Added
