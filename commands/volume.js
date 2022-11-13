@@ -1,7 +1,7 @@
 /*
   You can set the default volume through the Distube library.
   File Location: /node_modules/distube/index.js
-  Code line: 1727 (this.volume = 50;)
+  Code line: 1727 or just find "this.volume = 50;"
 */
 
 const Discord = require('discord.js')
@@ -12,7 +12,6 @@ module.exports = {
   inVoiceChannel: true,
   run: async (client, message, args) => {
     const queue = client.distube.getQueue(message)
-    // if (!queue) return message.channel.send(`${client.emotes.error} | There is nothing in the queue right now!`)
     if (!queue) {
       return message.reply({
         embeds: [

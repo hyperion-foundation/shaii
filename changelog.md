@@ -24,3 +24,24 @@
   - ```seek```
   - ```shuffle```
   - ```skipto```
+
+## [0.1.0-canary.1] - 2022-11-13
+#### In this release, we've made some changes on some commands.
+
+### Added
+- `latency.js` command has aliases (`ping`).
+
+### Changed
+- `play.js` command aliases has been changed (before `p`).
+- When `pause.js` is performed, the user will be informed with a reply and embedded message.
+- When `play.js` is performed, the user will be informed with a reply and embedded message.
+- When `queue.js` is performed, the user will be informed with a reply and embedded message.
+- When `repeat.js` is performed, the user will be informed with a reply and embedded message.
+- When `resume.js` is performed, the user will be informed with a reply and embedded message.
+- When `skip.js` is performed, the user will be informed with a reply and embedded message.
+- When `volume.js` is performed, the user will be informed with a reply and embedded message.
+
+### Removed
+- `pause.js` command aliases has been removed.
+- `queue.js` command aliases has been removed.
+- `stop.js` command aliases has been removed.

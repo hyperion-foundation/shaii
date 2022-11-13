@@ -12,6 +12,9 @@ module.exports = {
             .setColor('#ec9bbb')
             .setTitle(`${client.emotes.error} | Error`)
             .setDescription('There is nothing to be skipped, because the current song is empty!')
+            .addFields(
+              { name: 'Example Command Usage', value: `${process.env.PREFIX}skip` }
+            )
             .setTimestamp()
             .setFooter({ text: `${client.user.tag}`, iconURL: '<put your bot avatar link>' })
         ]

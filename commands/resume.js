@@ -13,6 +13,9 @@ module.exports = {
             .setColor('#ec9bbb')
             .setTitle(`${client.emotes.error} | Error`)
             .setDescription('There is no song to be resumed because the current queue is empty!')
+            .addFields(
+              { name: 'Example Command Usage', value: `${process.env.PREFIX}resume` }
+            )
             .setTimestamp()
             .setFooter({ text: `${client.user.tag}`, iconURL: '<put your bot avatar link>' })
         ]

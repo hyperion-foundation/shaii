@@ -1,15 +1,46 @@
+const Discord = require('discord.js')
+
 module.exports = {
   name: 'pause',
-  aliases: ['pause', 'hold'],
   inVoiceChannel: true,
   run: async (client, message) => {
     const queue = client.distube.getQueue(message)
-    if (!queue) return message.channel.send(`${client.emotes.error} | There is nothing in the queue right now!`)
+    if (!queue) {
+      return message.reply({
+        embeds: [
+          new Discord.EmbedBuilder()
+            .setColor('#ec9bbb')
+            .setTitle(`${client.emotes.error} | Error`)
+            .setDescription('There is no song or music to be paused, because the current queue is empty!')
+            .addFields(
+              { name: 'Example Command Usage', value: `\`${process.env.PREFIX}pause\`` }
+            )
+            .setTimestamp()
+            .setFooter({ text: `${client.user.tag}`, value: '<put your bot avatar link>' })
+        ]
+      })
+    }
     if (queue.paused) {
       queue.resume()
-      return message.channel.send('Resumed the song for you :)')
+      return message.reply({
+        embeds: [
+          new Discord.EmbedBuilder()
+            .setColor('#ec9bbb')
+            .setDescription(`${client.emotes.play} Resumed!`)
+            .setTimestamp()
+            .setFooter({ text: `${client.user.tag}`, iconURL: '<put your bot avatar link>' })
+        ]
+      })
     }
     queue.pause()
-    message.channel.send('Paused the song for you :)')
+    message.reply({
+      embeds: [
+        new Discord.EmbedBuilder()
+          .setColor('#ec9bbb')
+          .setDescription(`${client.emotes.pause} Paused!`)
+          .setTimestamp()
+          .setFooter({ text: `${client.user.tag}`, iconURL: '<put your bot avatar link>' })
+      ]
+    })
   }
 }

@@ -9,6 +9,7 @@ const Discord = require('discord.js')
 
 module.exports = {
   name: 'latency',
+  aliases: ['ping'],
   run: async (client, message) => {
     message.reply({
       embeds: [
