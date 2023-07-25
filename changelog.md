@@ -45,3 +45,54 @@
 - `pause.js` command aliases has been removed.
 - `queue.js` command aliases has been removed.
 - `stop.js` command aliases has been removed.
+
+## [0.1.0-canary.2] - 2023-07-25
+
+#### In this release, we made a lot of changes. We added Slash Command, refactors, and much more.
+
+### Added
+- Added **Slash Command** command function on `index.js`.
+> This feature is not **100%** usable, because it's still under development.
+- Added **slash-commands** folder for storing the commands.
+  - Added `commands.js` to **slash-commands** folder.
+  - Added `join.js` to **slash-commands** folder.
+  - Added `latency.js` to **slash-commands** folder.
+  - Added `leave.js` to **slash-commands** folder.
+  - Added `nowplaying.js` to **slash-commands** folder.
+  - Added `pause.js` to **slash-commands** folder.
+  - Added `play.js` to **slash-commands** folder.
+  - Added `queue.js` to **slash-commands** folder.
+  - Added `repeat.js` to **slash-commands** folder.
+  - Added `resume.js` to **slash-commands** folder.
+  - Added `skip.js` to **slash-commands** folder.
+  - Added `stop.js` to **slash-commands** folder.
+  - Added `uptime.js` to **slash-commands** folder.
+  - Added `version.js` to **slash-commands** folder.
+  - Added `voicelatency.js` to **slash-commands** folder.
+  - Added `volume.js` to **slash-commands** folder.
+  - Added `README.md` to **slash-commands** folder.
+- Added `deploy-command.js`.
+> This file used to deploy the Slash Command.
+- Added `uptime.js` to **legacy-commands** folder.
+- Added `README.md` to **legacy-commands** folder.
+- Added "cooldown" function on several commands (legacy commands). Here's the list of which commands that has the "cooldown" function:
+> Cooldown is a function to avoid floods/spams.
+  - Added "cooldown" function on `commands.js`.
+  - Added "cooldown" function on `latency.js`.
+  - Added "cooldown" function on `nowplaying.js`.
+  - Added "cooldown" function on `pause.js`.
+  - Added "cooldown" function on `queue.js`.
+  - Added "cooldown" function on `repeat.js`.
+  - Added "cooldown" function on `resume.js`.
+  - Added "cooldown" function on `skip.js`.
+  - Added "cooldown" function on `stop.js`.
+  - Added "cooldown" function on `uptime.js`.
+  - Added "cooldown" function on `volume.js`.
+
+### Changed
+- **commands** folder has been replaced with **legacy-commands**.
+- Update dependencies version (`package.json` & `package-lock.json`).
+- `index.js` has been refactored.
+
+### Removed
+- `.prettierrc.json` has been removed. Replaced with `.eslintrc.json`.
