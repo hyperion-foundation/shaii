@@ -1,6 +1,6 @@
 {
   "name": "shaii-canary",
-  "version": "0.1.0-canary.2",
+  "version": "1.0.0",
   "description": "Shaii Canary is an unstable version of Shaii Classic",
   "main": "index.js",
   "scripts": {
